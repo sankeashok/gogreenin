@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGreenIn - Cycling Revolution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-ultra-modern.css">
+</head>
+<body>
+    <!-- Floating Nav -->
+    <nav class="floating-nav">
+        <div class="nav-pill">
+            <img src="GGI_logo.png" alt="GGI" class="nav-logo">
+            <div class="nav-divider"></div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="join-btn">Join Community</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <div class="badge">17 Years • 5000+ Cyclists</div>
+                <h1 class="hero-title">
+                    Don't Wait.<br>
+                    <span class="gradient-text">Be the Change.</span>
+                </h1>
+                <p class="hero-desc">Transform Bangalore through cycling. Join India's most impactful environmental community.</p>
+                
+                <div class="cta-cards">
+                    <div class="cta-card primary">
+                        <div class="cta-icon">👥</div>
+                        <div class="cta-content">
+                            <h3>Join Community</h3>
+                            <p>5000+ active cyclists</p>
+                        </div>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="cta-btn">Register</a>
+                    </div>
+                    
+                    <div class="cta-card secondary">
+                        <div class="cta-icon">🚴</div>
+                        <div class="cta-content">
+                            <h3>Next Ride</h3>
+                            <p>Every Sunday 6:30 AM</p>
+                        </div>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="cta-btn">Join Ride</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <div class="image-stack">
+                    <div class="rolling-container">
+                        <div class="image-card">
+                            <img src="GGI_Campaign2008.jpg" alt="2008 Beginning">
+                            <div class="image-label">2008 - The Start</div>
+                        </div>
+                        <div class="image-card">
+                            <img src="GGI_Campaign2023.png" alt="2023 Campaign">
+                            <div class="image-label">2023 - Going Strong</div>
+                        </div>
+                        <div class="image-card">
+                            <img src="GGI_Campaign2008.jpg" alt="2008 Beginning">
+                            <div class="image-label">2008 - The Start</div>
+                        </div>
+                        <div class="image-card">
+                            <img src="GGI_Campaign2023.png" alt="2023 Campaign">
+                            <div class="image-label">2023 - Going Strong</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-number" data-target="17">0</div>
+            <div class="stat-label">Years</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="5000">0</div>
+            <div class="stat-label">Cyclists</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="300">0</div>
+            <div class="stat-label">Events</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">K+ KM</div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <div class="video-header">
+                <h2>Our Story</h2>
+                <p>Watch GoGreen Rao at Crayon Connect 2023</p>
+            </div>
+            <div class="video-player">
+                <div class="video-thumbnail" onclick="playVideo(this)"></div>
+                <iframe src="" frameborder="0" allowfullscreen style="display: none;"></iframe>
+                <div class="play-overlay">
+                    <div class="play-btn">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Grid -->
+    <section class="impact-section">
+        <h2 class="section-title">Our Impact</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <div class="impact-icon">🌱</div>
+                <h3>Tree Plantation</h3>
+                <p>2500+ trees planted across Bangalore</p>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">💧</div>
+                <h3>Lake Cleaning</h3>
+                <p>15+ lakes restored to natural beauty</p>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🚴</div>
+                <h3>Cycling Advocacy</h3>
+                <p>Promoting sustainable transport daily</p>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🌍</div>
+                <h3>CO2 Reduction</h3>
+                <p>10,000+ kg CO2 saved through cycling</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="cta-content">
+            <h2>Ready to Pedal Towards Change?</h2>
+            <p>Join Bangalore's cycling revolution. Every ride makes a difference.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="final-cta-btn">
+                <span>Join GoGreenIn</span>
+                <div class="btn-arrow">→</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="GGI_logo.png" alt="GoGreenIn">
+                <span>GoGreenIn</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/profile.php?id=100064416142595">Facebook</a>
+                <a href="https://youtu.be/4_BBbjwphnI">YouTube</a>
+                <a href="mailto:prabhakarrao.cm@gmail.com">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 GoGreenIn • Cycling towards a sustainable future</p>
+        </div>
+    </footer>
+
+    <script src="script-ultra-modern.js"></script>
+</body>
+</html>
