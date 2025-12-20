@@ -72,10 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // YouTube video player
 function playVideo(thumbnail) {
     const iframe = thumbnail.nextElementSibling;
-    iframe.src = 'https://www.youtube.com/embed/4_BBbjwphnI?autoplay=1';
+    iframe.src = 'https://www.youtube.com/embed/kojDjqbusYs?autoplay=1&rel=0';
     iframe.style.display = 'block';
     thumbnail.style.display = 'none';
-    thumbnail.parentElement.querySelector('.play-overlay').style.display = 'none';
+    const overlay = thumbnail.parentElement.querySelector('.play-overlay');
+    if (overlay) overlay.style.display = 'none';
 }
 
 // Loading animation

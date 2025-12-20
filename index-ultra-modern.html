@@ -17,6 +17,18 @@
         </div>
     </nav>
 
+    <!-- Floating Next Ride -->
+    <div class="floating-next-ride">
+        <div class="next-ride-card">
+            <div class="ride-icon">🚴</div>
+            <div class="ride-info">
+                <h4>Next Ride</h4>
+                <p>Sunday 6:30 AM</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="ride-btn">Join</a>
+        </div>
+    </div>
+
     <!-- Hero -->
     <section class="hero-section">
         <div class="hero-grid">
@@ -27,26 +39,6 @@
                     <span class="gradient-text">Be the Change.</span>
                 </h1>
                 <p class="hero-desc">Transform Bangalore through cycling. Join India's most impactful environmental community.</p>
-                
-                <div class="cta-cards">
-                    <div class="cta-card primary">
-                        <div class="cta-icon">👥</div>
-                        <div class="cta-content">
-                            <h3>Join Community</h3>
-                            <p>5000+ active cyclists</p>
-                        </div>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="cta-btn">Register</a>
-                    </div>
-                    
-                    <div class="cta-card secondary">
-                        <div class="cta-icon">🚴</div>
-                        <div class="cta-content">
-                            <h3>Next Ride</h3>
-                            <p>Every Sunday 6:30 AM</p>
-                        </div>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="cta-btn">Join Ride</a>
-                    </div>
-                </div>
             </div>
             
             <div class="hero-right">
@@ -68,6 +60,18 @@
                             <img src="GGI_Campaign2023.png" alt="2023 Campaign">
                             <div class="image-label">2023 - Going Strong</div>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- Video Section in Hero -->
+                <div class="hero-video">
+                    <div class="video-header">
+                        <h3>Our Story</h3>
+                        <p>Watch GoGreen Rao at Crayon Connect 2023</p>
+                    </div>
+                    <div class="video-player">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/kojDjqbusYs/maxresdefault.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; cursor: pointer;" onclick="this.style.display='none'; this.nextElementSibling.style.display='block'; this.nextElementSibling.src='https://www.youtube.com/embed/kojDjqbusYs?autoplay=1';"></div>
+                        <iframe src="" frameborder="0" allowfullscreen style="display: none; width: 100%; height: 100%;"></iframe>
                     </div>
                 </div>
             </div>
@@ -94,18 +98,42 @@
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="video-container">
-            <div class="video-header">
-                <h2>Our Story</h2>
-                <p>Watch GoGreen Rao at Crayon Connect 2023</p>
-            </div>
-            <div class="video-player">
-                <div class="video-thumbnail" onclick="playVideo(this)"></div>
-                <iframe src="" frameborder="0" allowfullscreen style="display: none;"></iframe>
-                <div class="play-overlay">
-                    <div class="play-btn">▶</div>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About GoGreenIn</h2>
+                <p class="about-intro">Welcome to GoGreenIn.org, Bangalore's oldest and largest community of like-minded sustainability enthusiasts! For over 17 years, we have been passionately promoting eco-friendly initiatives to create a positive impact on our environment.</p>
+                
+                <div class="about-grid">
+                    <div class="about-item">
+                        <div class="about-icon">🚴</div>
+                        <h3>Cycling for Sustainability</h3>
+                        <p>Leading weekend cycling rides across Bangalore to promote cycling as a sustainable mode of transport, raising awareness about health, environmental, and economic benefits.</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">💧</div>
+                        <h3>Lake Cleaning Drives</h3>
+                        <p>Restoring Bangalore's lakes to their natural beauty and ecological balance through community-driven conservation efforts.</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">🌱</div>
+                        <h3>Tree Plantations</h3>
+                        <p>Increasing green cover to combat urban heat and improve air quality across the city through strategic plantation drives.</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">👥</div>
+                        <h3>Community Outreach</h3>
+                        <p>Bringing people together to foster community spirit and encourage individuals to adopt greener habits in their daily lives.</p>
+                    </div>
+                </div>
+                
+                <div class="about-cta">
+                    <p>Join us in our mission to make Bangalore a greener, cleaner, and more sustainable city!</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-w0_2NGRsqiSUqDAiFzO2F6dtd7mAY1N-bXx02eR1WWbQ7g/viewform" class="about-btn">Be Part of Change</a>
                 </div>
             </div>
         </div>
@@ -113,27 +141,27 @@
 
     <!-- Impact Grid -->
     <section class="impact-section">
-        <h2 class="section-title">Our Impact</h2>
+        <h2 class="section-title">Environmental Impact</h2>
         <div class="impact-grid">
             <div class="impact-card">
                 <div class="impact-icon">🌱</div>
-                <h3>Tree Plantation</h3>
-                <p>2500+ trees planted across Bangalore</p>
+                <h3>2500+ Trees</h3>
+                <p>Planted across Bangalore to increase green cover</p>
             </div>
             <div class="impact-card">
                 <div class="impact-icon">💧</div>
-                <h3>Lake Cleaning</h3>
-                <p>15+ lakes restored to natural beauty</p>
+                <h3>15+ Lakes</h3>
+                <p>Restored to natural beauty and ecological balance</p>
             </div>
             <div class="impact-card">
                 <div class="impact-icon">🚴</div>
-                <h3>Cycling Advocacy</h3>
-                <p>Promoting sustainable transport daily</p>
+                <h3>50K+ KM</h3>
+                <p>Cycled collectively promoting sustainable transport</p>
             </div>
             <div class="impact-card">
                 <div class="impact-icon">🌍</div>
-                <h3>CO2 Reduction</h3>
-                <p>10,000+ kg CO2 saved through cycling</p>
+                <h3>10K+ KG CO2</h3>
+                <p>Carbon emissions saved through cycling initiatives</p>
             </div>
         </div>
     </section>
@@ -159,7 +187,7 @@
             </div>
             <div class="footer-links">
                 <a href="https://www.facebook.com/profile.php?id=100064416142595">Facebook</a>
-                <a href="https://youtu.be/4_BBbjwphnI">YouTube</a>
+                <a href="https://youtu.be/kojDjqbusYs">YouTube</a>
                 <a href="mailto:prabhakarrao.cm@gmail.com">Contact</a>
             </div>
         </div>
