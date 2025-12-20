@@ -779,7 +779,42 @@ body {
 }
 
 /* Responsive */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-video .video-player {
+        height: 400px;
+    }
+    
+    .image-stack {
+        height: 250px;
+    }
+    
+    .image-card {
+        min-width: 400px;
+        height: 200px;
+    }
+}
+
 @media (max-width: 768px) {
+    .floating-nav {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        transform: none;
+    }
+    
+    .nav-pill {
+        padding: 8px 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
     .floating-next-ride {
         top: 80px;
         right: 10px;
@@ -790,45 +825,158 @@ body {
         min-width: 160px;
     }
     
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-        text-align: center;
+    .hero-section {
+        padding: 100px 20px 60px;
     }
     
-    .cta-cards {
-        grid-template-columns: 1fr;
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-video .video-player {
+        height: 250px;
+    }
+    
+    .image-stack {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .image-card {
+        min-width: 300px;
+        height: 150px;
     }
     
     .stats-bar {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        padding: 30px 20px;
     }
     
-    .image-stack {
-        height: 400px;
+    .about-section,
+    .impact-section,
+    .final-cta {
+        padding: 80px 20px;
     }
     
-    .image-card.main {
-        width: 300px;
-        height: 400px;
-        position: relative;
-        top: auto;
-        right: auto;
+    .about-grid,
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
-    .image-card.floating {
-        display: none;
+    .section-title {
+        font-size: 2rem;
     }
     
     .footer-content {
         flex-direction: column;
-        gap: 32px;
+        gap: 20px;
         text-align: center;
     }
     
     .footer-links {
         flex-direction: column;
-        gap: 16px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 90px 15px 40px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    
+    .hero-desc {
+        font-size: 16px;
+    }
+    
+    .badge {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+    
+    .hero-video .video-player {
+        height: 200px;
+    }
+    
+    .image-stack {
+        height: 150px;
+    }
+    
+    .image-card {
+        min-width: 250px;
+        height: 120px;
+    }
+    
+    .stats-bar {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .about-section,
+    .impact-section,
+    .final-cta {
+        padding: 60px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-intro {
+        font-size: 16px;
+    }
+    
+    .about-item,
+    .impact-card {
+        padding: 20px;
+    }
+    
+    .nav-pill {
+        padding: 6px 12px;
+        gap: 8px;
+    }
+    
+    .nav-logo {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .join-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .floating-next-ride {
+        top: 70px;
+        right: 5px;
+    }
+    
+    .next-ride-card {
+        padding: 8px;
+        min-width: 140px;
+    }
+    
+    .ride-info h4 {
+        font-size: 12px;
+    }
+    
+    .ride-info p {
+        font-size: 10px;
+    }
+    
+    .ride-btn {
+        padding: 4px 8px;
+        font-size: 10px;
     }
 }
