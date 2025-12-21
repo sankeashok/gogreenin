@@ -236,9 +236,12 @@ function openYearModal(year) {
     document.getElementById('modalImage').alt = `${year} - ${data.title}`;
     
     const eventsContainer = document.getElementById('modalEvents');
-    eventsContainer.innerHTML = data.events.map(event => 
-        `<div class="modal-event-item">${event}</div>`
-    ).join('');
+    eventsContainer.innerHTML = data.events.map(event => {
+        if (event === '17th Anniversary celebration' && year === '2025') {
+            return `<div class="modal-event-item"><a href="https://drive.google.com/drive/folders/1G30nMM-8f7A0kyYcdw6-KDJsxLUGGiHv" target="_blank" style="color: var(--primary); text-decoration: none;">${event}</a></div>`;
+        }
+        return `<div class="modal-event-item">${event}</div>`;
+    }).join('');
     
     document.getElementById('yearModal').style.display = 'block';
     document.body.style.overflow = 'hidden';
