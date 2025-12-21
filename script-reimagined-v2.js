@@ -95,6 +95,20 @@ function toggleGallery() {
     }
 }
 
+// Timeline year expand/collapse functionality
+function toggleYear(year) {
+    const eventsContainer = document.getElementById(`events-${year}`);
+    const arrow = document.querySelector(`[onclick="toggleYear('${year}')"] .year-arrow`);
+    
+    if (eventsContainer.classList.contains('collapsed')) {
+        eventsContainer.classList.remove('collapsed');
+        arrow.style.transform = 'rotate(90deg)';
+    } else {
+        eventsContainer.classList.add('collapsed');
+        arrow.style.transform = 'rotate(0deg)';
+    }
+}
+
 // Load saved theme
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
