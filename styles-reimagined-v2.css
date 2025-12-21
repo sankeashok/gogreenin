@@ -462,6 +462,10 @@ body {
     position: relative;
 }
 
+[data-theme="light"] .year {
+    color: #0a0a0a;
+}
+
 .year:hover {
     transform: scale(1.05);
     box-shadow: 0 2px 8px rgba(0, 255, 136, 0.3);
@@ -506,6 +510,157 @@ body {
 .event-item:hover {
     background: rgba(0, 255, 136, 0.2);
     border-color: var(--primary);
+}
+
+/* Year Details Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--dark);
+    margin: 5% auto;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.modal-header h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.close {
+    color: var(--light);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--primary);
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-details h3 {
+    color: var(--light);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.modal-details p {
+    color: var(--light);
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-events {
+    margin-bottom: 25px;
+}
+
+.modal-event-item {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    color: var(--light);
+    transition: all 0.2s ease;
+}
+
+.modal-event-item:hover {
+    background: rgba(0, 255, 136, 0.2);
+    border-color: var(--primary);
+}
+
+.modal-actions {
+    text-align: center;
+}
+
+.modal-btn {
+    background: var(--primary);
+    color: var(--dark);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Mobile Modal Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .modal-header {
+        padding: 15px 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-image {
+        height: 150px;
+    }
 }
 
 .timeline-item h3 {

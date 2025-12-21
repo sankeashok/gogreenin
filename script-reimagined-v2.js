@@ -95,7 +95,180 @@ function toggleGallery() {
     }
 }
 
-// Timeline year expand/collapse functionality
+// Timeline year modal functionality
+const yearData = {
+    '2008': {
+        title: 'The Beginning',
+        description: 'Started with a vision to make Bangalore greener through cycling and environmental awareness.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['First cycling group formation', 'Environmental awareness campaigns', 'Community outreach programs'],
+        url: '#2008-details'
+    },
+    '2009': {
+        title: 'Growing Community',
+        description: 'First year of regular cycling events and community building initiatives.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['Weekly Sunday rides established', 'First 50 members milestone', 'Local park cleanup drives'],
+        url: '#2009-details'
+    },
+    '2010': {
+        title: 'Expanding Reach',
+        description: 'More cyclists joining the movement with expanded activities.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['100+ active cyclists', 'First inter-city cycling event', 'Partnership with local NGOs'],
+        url: '#2010-details'
+    },
+    '2011': {
+        title: 'Environmental Focus',
+        description: 'Started lake cleaning initiatives and water conservation programs.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['First lake restoration project', 'Water conservation awareness', 'Collaboration with BBMP'],
+        url: '#2011-details'
+    },
+    '2012': {
+        title: 'Tree Plantation',
+        description: 'Began large-scale tree planting drives across Bangalore.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['500+ saplings planted', 'Green corridor development', 'School environmental programs'],
+        url: '#2012-details'
+    },
+    '2013': {
+        title: '5 Years Strong',
+        description: 'Celebrating half a decade of environmental impact and community growth.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['5th Anniversary celebration', 'Media recognition', 'Community awards received'],
+        url: '#2013-details'
+    },
+    '2014': {
+        title: 'Community Outreach',
+        description: 'Expanded to multiple cycling groups and corporate partnerships.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['Multiple zone chapters', 'Corporate partnerships', 'Youth engagement programs'],
+        url: '#2014-details'
+    },
+    '2015': {
+        title: 'Sustainability Focus',
+        description: 'Promoting cycling as eco-friendly transport solution.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['Cycle-to-work campaigns', 'Carbon footprint awareness', 'Green transport advocacy'],
+        url: '#2015-details'
+    },
+    '2016': {
+        title: 'Digital Presence',
+        description: 'Launched online community platform and digital campaigns.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['Facebook community launch', 'Online event coordination', 'Digital awareness campaigns'],
+        url: '#2016-details'
+    },
+    '2017': {
+        title: 'Milestone Year',
+        description: 'Reached 1000+ active cyclists and expanded impact.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['1000+ member milestone', 'Long distance rides', 'Environmental impact study'],
+        url: '#2017-details'
+    },
+    '2018': {
+        title: '10 Years Legacy',
+        description: 'Decade of environmental contribution and community building.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['10th Anniversary celebration', 'Government recognition', 'Legacy documentation'],
+        url: '#2018-details'
+    },
+    '2019': {
+        title: 'Recognition',
+        description: 'Awarded for environmental initiatives and community impact.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['Environmental excellence award', 'Media coverage expansion', 'Policy advocacy initiatives'],
+        url: '#2019-details'
+    },
+    '2020': {
+        title: 'Pandemic Resilience',
+        description: 'Adapted to safe cycling practices during COVID-19.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['COVID-safe cycling protocols', 'Virtual community events', 'Health awareness campaigns'],
+        url: '#2020-details'
+    },
+    '2021': {
+        title: 'Recovery & Growth',
+        description: 'Bounced back stronger post-pandemic with renewed energy.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['Post-pandemic revival', 'New member onboarding', 'Enhanced safety measures'],
+        url: '#2021-details'
+    },
+    '2022': {
+        title: 'Innovation',
+        description: 'Introduced new cycling routes and technology integration.',
+        image: 'GGI_Campaign2008.jpg',
+        events: ['New heritage route discovery', 'Technology integration', 'Fitness tracking initiatives'],
+        url: '#2022-details'
+    },
+    '2023': {
+        title: '15 Years Strong',
+        description: 'Grown into Bangalore\'s largest cycling community.',
+        image: 'GGI_Campaign2023.png',
+        events: ['15th Anniversary mega ride', '5000+ community members', 'Leadership development programs'],
+        url: '#2023-details'
+    },
+    '2024': {
+        title: 'Continued Impact',
+        description: 'Expanding environmental initiatives and climate action.',
+        image: 'GGI_Campaign2023.png',
+        events: ['Climate action campaigns', 'Sustainable transport advocacy', 'Youth leadership programs'],
+        url: '#2024-details'
+    },
+    '2025': {
+        title: '17 Years Legacy',
+        description: 'Continuing the environmental revolution with future vision.',
+        image: 'GGI_Campaign2023.png',
+        events: ['17th Anniversary celebration', 'Future vision planning', 'Next generation initiatives'],
+        url: '#2025-details'
+    }
+};
+
+function openYearModal(year) {
+    const data = yearData[year];
+    if (!data) return;
+    
+    document.getElementById('modalYear').textContent = year;
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalDescription').textContent = data.description;
+    document.getElementById('modalImage').src = data.image;
+    document.getElementById('modalImage').alt = `${year} - ${data.title}`;
+    
+    const eventsContainer = document.getElementById('modalEvents');
+    eventsContainer.innerHTML = data.events.map(event => 
+        `<div class="modal-event-item">${event}</div>`
+    ).join('');
+    
+    document.getElementById('yearModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    // Store current year for "View Full Details" button
+    window.currentModalYear = year;
+}
+
+function closeYearModal() {
+    document.getElementById('yearModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function openInNewTab() {
+    const year = window.currentModalYear;
+    const data = yearData[year];
+    if (data && data.url) {
+        window.open(data.url, '_blank');
+    }
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('yearModal');
+    if (event.target === modal) {
+        closeYearModal();
+    }
+}
+
+// Timeline year expand/collapse functionality (keeping as fallback)
 function toggleYear(year) {
     const eventsContainer = document.getElementById(`events-${year}`);
     const arrow = document.querySelector(`[onclick="toggleYear('${year}')"] .year-arrow`);
