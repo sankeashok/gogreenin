@@ -1,0 +1,58 @@
+{
+  "month": "January 2024",
+  "sunday_rides": [
+    {
+      "date": "2024-01-07",
+      "title": "New Year Ride",
+      "participants": 45,
+      "route": "Cubbon Park - Lalbagh",
+      "distance": "12km",
+      "photos": [],
+      "weather": "Pleasant"
+    },
+    {
+      "date": "2024-01-14",
+      "title": "Weekend Wellness Ride",
+      "participants": 38,
+      "route": "Ulsoor Lake Circuit",
+      "distance": "10km",
+      "photos": [],
+      "weather": "Sunny"
+    },
+    {
+      "date": "2024-01-21",
+      "title": "Heritage Route Ride",
+      "participants": 52,
+      "route": "Bangalore Palace - Tipu Palace",
+      "distance": "15km",
+      "photos": [],
+      "weather": "Cool"
+    },
+    {
+      "date": "2024-01-26",
+      "title": "Republic Day Special Ride",
+      "participants": 300,
+      "route": "Freedom Park - Vidhana Soudha",
+      "distance": "15km",
+      "photos": [],
+      "weather": "Perfect",
+      "special_event": true
+    },
+    {
+      "date": "2024-01-28",
+      "title": "Month End Ride",
+      "participants": 41,
+      "route": "Sankey Tank - Malleshwaram",
+      "distance": "11km",
+      "photos": [],
+      "weather": "Pleasant"
+    }
+  ],
+  "monthly_stats": {
+    "total_rides": 5,
+    "total_participants": 476,
+    "total_distance": "63km",
+    "avg_participants": 95,
+    "special_events": 1
+  }
+}

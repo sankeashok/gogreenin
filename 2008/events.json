@@ -1,0 +1,57 @@
+{
+  "year": 2008,
+  "title": "The Beginning",
+  "months": {
+    "12": {
+      "name": "December",
+      "rides": 2,
+      "cyclists": 25,
+      "events": [
+        {
+          "name": "Event 2 - Year End Foundation",
+          "url": "",
+          "photos": [],
+          "description": "First year-end celebration"
+        },
+        {
+          "name": "Event 1 - First Community Meet",
+          "url": "",
+          "photos": [],
+          "description": "Initial community gathering"
+        }
+      ]
+    },
+    "11": {
+      "name": "November",
+      "rides": 2,
+      "cyclists": 20,
+      "events": [
+        {
+          "name": "Event 2 - Awareness Campaign",
+          "url": "",
+          "photos": [],
+          "description": "Environmental awareness drive"
+        },
+        {
+          "name": "Event 1 - Group Formation",
+          "url": "",
+          "photos": [],
+          "description": "Official group formation"
+        }
+      ]
+    },
+    "10": {
+      "name": "October",
+      "rides": 1,
+      "cyclists": 15,
+      "events": [
+        {
+          "name": "Event 1 - GoGreenIn Launch",
+          "url": "",
+          "photos": [],
+          "description": "Official launch of GoGreenIn"
+        }
+      ]
+    }
+  }
+}

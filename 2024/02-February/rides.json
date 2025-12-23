@@ -1,0 +1,48 @@
+{
+  "month": "February 2024",
+  "sunday_rides": [
+    {
+      "date": "2024-02-04",
+      "title": "February Fresh Start",
+      "participants": 43,
+      "route": "Hebbal Lake - Nagawara",
+      "distance": "13km",
+      "photos": [],
+      "weather": "Cool morning"
+    },
+    {
+      "date": "2024-02-11",
+      "title": "Valentine's Weekend Ride",
+      "participants": 67,
+      "route": "Lalbagh - Rose Garden",
+      "distance": "14km",
+      "photos": [],
+      "weather": "Romantic weather"
+    },
+    {
+      "date": "2024-02-18",
+      "title": "Health & Fitness Ride",
+      "participants": 39,
+      "route": "Cubbon Park Circuit",
+      "distance": "10km",
+      "photos": [],
+      "weather": "Perfect"
+    },
+    {
+      "date": "2024-02-25",
+      "title": "Month End Challenge",
+      "participants": 48,
+      "route": "Bannerghatta Road",
+      "distance": "16km",
+      "photos": [],
+      "weather": "Sunny"
+    }
+  ],
+  "monthly_stats": {
+    "total_rides": 4,
+    "total_participants": 197,
+    "total_distance": "53km",
+    "avg_participants": 49,
+    "special_events": 0
+  }
+}

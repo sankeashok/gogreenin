@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGreenIn Events Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .year-section { background: white; margin: 20px 0; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: relative; }
+        .year-title { color: #00ff88; font-size: 1.5rem; margin-bottom: 15px; }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #00ff88;
+            color: #0a0a0a;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #00ff88;
+        }
+        .close-btn:hover {
+            background: #0a0a0a;
+            color: #00ff88;
+            transform: scale(1.1);
+        }
+        .month-section { margin: 15px 0; padding: 15px; background: #f9f9f9; border-radius: 8px; }
+        .month-title { color: #333; font-weight: bold; margin-bottom: 10px; }
+        .event-item { margin: 8px 0; padding: 10px; background: white; border-radius: 5px; border-left: 3px solid #00ff88; }
+        .event-name { font-weight: bold; color: #333; }
+        .event-details { font-size: 0.9rem; color: #666; margin-top: 5px; }
+        .edit-note { background: #e8f5e8; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .stats { color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="edit-note">
+        <h2>📝 Event Management Guide</h2>
+        <p><strong>How to edit events:</strong></p>
+        <ol>
+            <li>Find the event you want to rename below</li>
+            <li>Copy the event name (e.g., "Event 1 - New Year Kickoff Ride")</li>
+            <li>Open the corresponding year's JSON file (e.g., 2025/events.json)</li>
+            <li>Replace the event name with your desired name</li>
+            <li>Add URLs by adding: <code>"url": "your-link-here"</code> to each event</li>
+        </ol>
+        <p><strong>Example JSON format:</strong><br>
+        <code>{"name": "Event 1 - Your Custom Name", "url": "https://facebook.com/post123", "photos": ["photo1.jpg"]}</code></p>
+    </div>
+
+    <div id="eventsContainer">
+        <!-- Events will be loaded here -->
+    </div>
+
+    <script>
+        // Event data from the website
+        const yearData = {
+            '2025': {
+                title: '17 Years Legacy',
+                monthlyData: [
+                    {month: 'Dec', rides: 5, cyclists: 300, events: ['Event 5 - 17th Anniversary Celebration', 'Event 4 - Community Awards', 'Event 3 - New Year Prep', 'Event 2 - Year-End Review', 'Event 1 - Christmas Ride']},
+                    {month: 'Nov', rides: 4, cyclists: 210, events: ['Event 4 - Thanksgiving Ride', 'Event 3 - Winter Prep', 'Event 2 - Air Quality Awareness', 'Event 1 - Diwali Celebration']},
+                    {month: 'Oct', rides: 4, cyclists: 195, events: ['Event 4 - Community Bonding', 'Event 3 - Heritage Tour', 'Event 2 - Festival of Lights Prep', 'Event 1 - Dussehra Ride']},
+                    {month: 'Sep', rides: 4, cyclists: 185, events: ['Event 4 - Fitness Focus', 'Event 3 - Clean-up Drive', 'Event 2 - Ganesh Festival', 'Event 1 - Post-Monsoon Revival']},
+                    {month: 'Aug', rides: 5, cyclists: 250, events: ['Event 5 - Unity Ride', 'Event 4 - Cultural Program', 'Event 3 - Flag Hoisting', 'Event 2 - Patriotic Route', 'Event 1 - Independence Day Ride']},
+                    {month: 'Jul', rides: 3, cyclists: 150, events: ['Event 3 - Community Meet', 'Event 2 - Indoor Training', 'Event 1 - Monsoon Ride']},
+                    {month: 'Jun', rides: 4, cyclists: 200, events: ['Event 4 - Mid-Year Review', 'Event 3 - Safety Awareness', 'Event 2 - Monsoon Prep', 'Event 1 - World Environment Day']},
+                    {month: 'May', rides: 4, cyclists: 175, events: ['Event 4 - Youth Engagement', 'Event 3 - Lake Restoration', 'Event 2 - Mother\'s Day Special', 'Event 1 - May Day Ride']},
+                    {month: 'Apr', rides: 4, cyclists: 190, events: ['Event 4 - Fitness Challenge', 'Event 3 - Community Service', 'Event 2 - Summer Prep Ride', 'Event 1 - Earth Day Special']},
+                    {month: 'Mar', rides: 5, cyclists: 220, events: ['Event 5 - Month End Ride', 'Event 4 - Endurance Challenge', 'Event 3 - Tree Plantation', 'Event 2 - Women\'s Day Special', 'Event 1 - Spring Festival']},
+                    {month: 'Feb', rides: 4, cyclists: 165, events: ['Event 4 - Heritage Route', 'Event 3 - Lake Cleaning Drive', 'Event 2 - Health Awareness', 'Event 1 - Valentine Ride']},
+                    {month: 'Jan', rides: 4, cyclists: 180, events: ['Event 4 - Community Outreach Ride', 'Event 3 - Weekend Wellness Ride', 'Event 2 - Republic Day Preparation', 'Event 1 - New Year Kickoff Ride']}
+                ]
+            },
+            '2024': {
+                title: 'Continued Impact',
+                monthlyData: [
+                    {month: 'Dec', rides: 4, cyclists: 280, events: ['Event 4 - 16th Anniversary Ride', 'Event 3 - Year End Celebration', 'Event 2 - Winter Solstice', 'Event 1 - Christmas Special']},
+                    {month: 'Nov', rides: 4, cyclists: 195, events: ['Event 4 - Diwali Ride', 'Event 3 - Air Quality Drive', 'Event 2 - Heritage Tour', 'Event 1 - Festival Prep']},
+                    {month: 'Oct', rides: 4, cyclists: 210, events: ['Event 4 - Durga Puja Special', 'Event 3 - Clean Air Campaign', 'Event 2 - Community Service', 'Event 1 - Festive Season']}
+                ]
+            }
+        };
+
+        function displayEvents() {
+            const container = document.getElementById('eventsContainer');
+            
+            Object.keys(yearData).forEach(year => {
+                const yearSection = document.createElement('div');
+                yearSection.className = 'year-section';
+                
+                const yearTitle = document.createElement('div');
+                yearTitle.className = 'year-title';
+                yearTitle.textContent = `${year} - ${yearData[year].title}`;
+                yearSection.appendChild(yearTitle);
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.className = 'close-btn';
+                closeBtn.textContent = '×';
+                closeBtn.onclick = () => yearSection.style.display = 'none';
+                yearSection.appendChild(closeBtn);
+                
+                yearData[year].monthlyData.forEach(monthData => {
+                    const monthSection = document.createElement('div');
+                    monthSection.className = 'month-section';
+                    
+                    const monthTitle = document.createElement('div');
+                    monthTitle.className = 'month-title';
+                    monthTitle.innerHTML = `${monthData.month} <span class="stats">(${monthData.rides} rides, ${monthData.cyclists} cyclists)</span>`;
+                    monthSection.appendChild(monthTitle);
+                    
+                    monthData.events.forEach(event => {
+                        const eventItem = document.createElement('div');
+                        eventItem.className = 'event-item';
+                        
+                        const eventName = document.createElement('div');
+                        eventName.className = 'event-name';
+                        eventName.textContent = event;
+                        eventItem.appendChild(eventName);
+                        
+                        const eventDetails = document.createElement('div');
+                        eventDetails.className = 'event-details';
+                        eventDetails.innerHTML = `File: <code>${year}/events.json</code> | Add URL: <code>"url": "your-link-here"</code>`;
+                        eventItem.appendChild(eventDetails);
+                        
+                        monthSection.appendChild(eventItem);
+                    });
+                    
+                    yearSection.appendChild(monthSection);
+                });
+                
+                container.appendChild(yearSection);
+            });
+        }
+
+        // Load events when page loads
+        displayEvents();
+    </script>
+</body>
+</html>

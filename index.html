@@ -17,16 +17,17 @@
             </div>
             <div class="action-buttons">
                 <div class="gallery-nav">
-                    <a href="#events-gallery" data-filter="all" class="gallery-link">All</a>
                     <a href="#events-gallery" data-filter="sunday-rides" class="gallery-link">Sunday</a>
                     <a href="#events-gallery" data-filter="anniversary" class="gallery-link">Anniversary</a>
                     <a href="#events-gallery" data-filter="national-events" class="gallery-link">Special Events</a>
                     <a href="#events-gallery" data-filter="endurance" class="gallery-link">Endurance</a>
+                    <a href="#journey-timeline" class="gallery-link nav-link">Our Journey</a>
+                    <!-- <a href="statistics.html" class="gallery-link nav-link">📊 Statistics</a> -->
                 </div>
                 <button class="theme-toggle" onclick="toggleTheme()">
                     <span class="theme-icon">🌙</span>
                 </button>
-                <a href="https://forms.gle/xBr4Ppko3zwNsc2eA" class="anniversary-btn">🎉 Anniversary Ride 2025</a>
+                <a href="https://forms.gle/xBr4Ppko3zwNsc2eA" class="anniversary-btn">Up Coming Ride</a>
             </div>
         </div>
     </div>
@@ -95,7 +96,7 @@
     </section>
 
     <!-- Journey Timeline -->
-    <section class="journey-timeline">
+    <section id="journey-timeline" class="journey-timeline">
         <div class="timeline-container">
             <h2>Our Journey</h2>
             <div class="timeline">
@@ -424,7 +425,7 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-image">
-                        <img src="GGI_Campaign2023.png" alt="2025">
+                        <img src="2025/17th Anniversary-2025 Year.jpg" alt="2025">
                     </div>
                     <div class="timeline-content">
                         <div class="year" onclick="openYearModal('2025')">
@@ -670,7 +671,8 @@
             </div>
             <div class="modal-body">
                 <div class="modal-image">
-                    <img id="modalImage" src="" alt="">
+                    <img id="modalImage" src="" alt="" onclick="openImageFullscreen(this.src)" style="cursor: pointer;">
+                    <div class="image-close-modal" onclick="closeYearModal()">&times;</div>
                 </div>
                 <div class="modal-details">
                     <h3 id="modalTitle"></h3>
@@ -681,6 +683,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Image Fullscreen Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="image-modal-content">
+            <span class="image-close" onclick="closeImageModal()">&times;</span>
+            <img id="fullscreenImage" src="" alt="">
         </div>
     </div>
 

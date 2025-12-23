@@ -1,0 +1,105 @@
+{
+  "year": 2025,
+  "title": "17 Years Legacy",
+  "months": {
+    "12": {
+      "name": "December",
+      "rides": 5,
+      "cyclists": 300,
+      "events": [
+        {
+          "name": "Event 5 - 17th Anniversary Celebration",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 4 - Community Awards",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 3 - New Year Prep",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 2 - Year-End Review",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 1 - Christmas Ride",
+          "url": "",
+          "photos": [],
+          "description": ""
+        }
+      ]
+    },
+    "11": {
+      "name": "November",
+      "rides": 4,
+      "cyclists": 210,
+      "events": [
+        {
+          "name": "Event 4 - Thanksgiving Ride",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 3 - Winter Prep",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 2 - Air Quality Awareness",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 1 - Diwali Celebration",
+          "url": "",
+          "photos": [],
+          "description": ""
+        }
+      ]
+    },
+    "01": {
+      "name": "January",
+      "rides": 4,
+      "cyclists": 180,
+      "events": [
+        {
+          "name": "Event 4 - Community Outreach Ride",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 3 - Weekend Wellness Ride",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 2 - Republic Day Preparation",
+          "url": "",
+          "photos": [],
+          "description": ""
+        },
+        {
+          "name": "Event 1 - New Year Kickoff Ride",
+          "url": "",
+          "photos": [],
+          "description": ""
+        }
+      ]
+    }
+  }
+}

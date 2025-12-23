@@ -1,0 +1,61 @@
+{
+  "year": 2024,
+  "events": [
+    {
+      "id": "anniversary-2024",
+      "title": "16th Anniversary Ride",
+      "date": "2024-12-21",
+      "category": "anniversary",
+      "description": "Celebrating 16 years of environmental impact",
+      "participants": 500,
+      "distance": "25km",
+      "route": "Cubbon Park to Lalbagh",
+      "photos": [],
+      "videos": [],
+      "impact": {
+        "co2_saved": "125kg",
+        "trees_equivalent": "5"
+      }
+    },
+    {
+      "id": "republic-day-2024",
+      "title": "Republic Day Ride",
+      "date": "2024-01-26",
+      "category": "national-events",
+      "description": "Patriotic cycling event celebrating India's Republic Day",
+      "participants": 300,
+      "distance": "15km",
+      "route": "Freedom Park to Vidhana Soudha",
+      "photos": [],
+      "videos": [],
+      "impact": {
+        "co2_saved": "75kg",
+        "trees_equivalent": "3"
+      }
+    },
+    {
+      "id": "independence-day-2024",
+      "title": "Independence Day Ride",
+      "date": "2024-08-15",
+      "category": "national-events",
+      "description": "Celebrating India's Independence with eco-friendly transport",
+      "participants": 400,
+      "distance": "20km",
+      "route": "Red Fort replica to India Gate replica",
+      "photos": [],
+      "videos": [],
+      "impact": {
+        "co2_saved": "100kg",
+        "trees_equivalent": "4"
+      }
+    }
+  ],
+  "yearly_stats": {
+    "total_events": 52,
+    "total_participants": 5200,
+    "total_distance": "1040km",
+    "co2_saved": "2600kg",
+    "trees_planted": 150,
+    "lakes_cleaned": 3
+  }
+}

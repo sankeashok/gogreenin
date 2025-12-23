@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGreenIn Impact Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00ff88;
+            --primary-dark: #00cc6a;
+            --secondary: #ff6b35;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+            --gray: #888888;
+            --gray-light: #1a1a1a;
+            --gradient: linear-gradient(135deg, #0a0a0a 0%, #00ff88 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        .stats-header {
+            background: var(--gradient);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .stats-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .stats-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .yearly-breakdown {
+            margin-top: 60px;
+        }
+
+        .yearly-breakdown h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .year-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .year-card {
+            background: var(--gray-light);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .year-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .year-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 255, 136, 0.05);
+            border-radius: 10px;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .environmental-impact {
+            background: var(--gradient);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .environmental-impact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .impact-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .stats-header h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-container {
+                padding: 40px 15px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .year-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+
+    <header class="stats-header">
+        <h1>Our Environmental Impact</h1>
+        <p>17 years of data-driven environmental change through cycling and community action</p>
+    </header>
+
+    <main class="stats-container">
+        <!-- Overall Statistics -->
+        <section class="overall-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🚴</div>
+                    <span class="stat-number" data-target="5000">0</span>
+                    <div class="stat-label">Total Cyclists</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <span class="stat-number" data-target="300">0</span>
+                    <div class="stat-label">Events Organized</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🛣️</div>
+                    <span class="stat-number" data-target="50000">0</span>
+                    <div class="stat-label">Kilometers Cycled</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🌱</div>
+                    <span class="stat-number" data-target="2500">0</span>
+                    <div class="stat-label">Trees Planted</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💧</div>
+                    <span class="stat-number" data-target="15">0</span>
+                    <div class="stat-label">Lakes Cleaned</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🌍</div>
+                    <span class="stat-number" data-target="25000">0</span>
+                    <div class="stat-label">CO2 Saved (kg)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environmental Impact -->
+        <section class="environmental-impact">
+            <h2>Environmental Equivalents</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="stat-icon">🏠</div>
+                    <div class="stat-number">125</div>
+                    <div class="stat-label">Homes' Annual Energy</div>
+                </div>
+
+                <div class="impact-item">
+                    <div class="stat-icon">🚗</div>
+                    <div class="stat-number">62,500</div>
+                    <div class="stat-label">Car Miles Avoided</div>
+                </div>
+
+                <div class="impact-item">
+                    <div class="stat-icon">🌳</div>
+                    <div class="stat-number">1,040</div>
+                    <div class="stat-label">Tree Seedlings Grown</div>
+                </div>
+
+                <div class="impact-item">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number">28,750</div>
+                    <div class="stat-label">kWh Energy Saved</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yearly Breakdown -->
+        <section class="yearly-breakdown">
+            <h2>Year-wise Impact</h2>
+            
+            <div class="year-stats">
+                <div class="year-card">
+                    <h3>2024 - Continued Growth</h3>
+                    <div class="year-metrics">
+                        <div class="metric">
+                            <div class="metric-value">52</div>
+                            <div class="metric-label">Events</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">5,200</div>
+                            <div class="metric-label">Participants</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1,040</div>
+                            <div class="metric-label">KM Cycled</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2,600</div>
+                            <div class="metric-label">CO2 Saved (kg)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">150</div>
+                            <div class="metric-label">Trees Planted</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3</div>
+                            <div class="metric-label">Lakes Cleaned</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="year-card">
+                    <h3>2023 - 15th Anniversary</h3>
+                    <div class="year-metrics">
+                        <div class="metric">
+                            <div class="metric-value">48</div>
+                            <div class="metric-label">Events</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">4,800</div>
+                            <div class="metric-label">Participants</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">960</div>
+                            <div class="metric-label">KM Cycled</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2,400</div>
+                            <div class="metric-label">CO2 Saved (kg)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">120</div>
+                            <div class="metric-label">Trees Planted</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Lakes Cleaned</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="year-card">
+                    <h3>2022 - Innovation Year</h3>
+                    <div class="year-metrics">
+                        <div class="metric">
+                            <div class="metric-value">45</div>
+                            <div class="metric-label">Events</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">4,200</div>
+                            <div class="metric-label">Participants</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">900</div>
+                            <div class="metric-label">KM Cycled</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2,250</div>
+                            <div class="metric-label">CO2 Saved (kg)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">100</div>
+                            <div class="metric-label">Trees Planted</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Lakes Cleaned</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growth Chart Placeholder -->
+        <section class="growth-section">
+            <h2>Growth Over Time</h2>
+            <div class="chart-placeholder" style="background: var(--gray-light); border-radius: 15px; padding: 40px; text-align: center; margin: 30px 0;">
+                <p style="opacity: 0.7;">📊 Interactive charts showing participant growth, environmental impact trends, and event frequency over 17 years</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.5;">Chart integration with Chart.js or similar library can be added here</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Animated counter function
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target.toLocaleString();
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.target.classList.contains('stat-number')) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCounter(entry.target, target);
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

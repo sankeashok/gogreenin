@@ -1,0 +1,45 @@
+{
+  "year": 2023,
+  "events": [
+    {
+      "id": "anniversary-2023",
+      "title": "15th Anniversary Mega Ride",
+      "date": "2023-12-21",
+      "category": "anniversary",
+      "description": "Milestone celebration - 15 years of GoGreenIn",
+      "participants": 800,
+      "distance": "30km",
+      "route": "Bangalore Palace to Cubbon Park",
+      "photos": ["GGI_Campaign2023.png"],
+      "videos": [],
+      "impact": {
+        "co2_saved": "200kg",
+        "trees_equivalent": "8"
+      }
+    },
+    {
+      "id": "temple-endurance-2023",
+      "title": "Temple Endurance Ride",
+      "date": "2023-06-15",
+      "category": "endurance",
+      "description": "Monthly spiritual and fitness journey",
+      "participants": 200,
+      "distance": "50km",
+      "route": "ISKCON to Bull Temple",
+      "photos": [],
+      "videos": [],
+      "impact": {
+        "co2_saved": "250kg",
+        "trees_equivalent": "10"
+      }
+    }
+  ],
+  "yearly_stats": {
+    "total_events": 48,
+    "total_participants": 4800,
+    "total_distance": "960km",
+    "co2_saved": "2400kg",
+    "trees_planted": 120,
+    "lakes_cleaned": 2
+  }
+}
