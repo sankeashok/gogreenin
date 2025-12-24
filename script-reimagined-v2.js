@@ -1,13 +1,13 @@
 // Reimagined GoGreenIn JavaScript
 
-// Handle Endurance navigation
-function handleEnduranceClick(event) {
+// Handle Gallery navigation for all categories
+function handleGalleryNavigation(event, category) {
     event.preventDefault();
     
     // Scroll to events gallery
     document.querySelector('#events-gallery').scrollIntoView({ behavior: 'smooth' });
     
-    // Expand gallery and filter to endurance
+    // Expand gallery and filter to specified category
     setTimeout(() => {
         const galleryContent = document.getElementById('galleryContent');
         const toggleText = document.querySelector('.toggle-text');
@@ -20,15 +20,15 @@ function handleEnduranceClick(event) {
             toggleIcon.textContent = '▼';
         }
         
-        // Filter to endurance
+        // Filter to specified category
         const filterBtns = document.querySelectorAll('.filter-btn');
         filterBtns.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.filter === 'endurance');
+            btn.classList.toggle('active', btn.dataset.filter === category);
         });
         
         const eventItems = document.querySelectorAll('.event-item');
         eventItems.forEach(item => {
-            if (item.dataset.category === 'endurance') {
+            if (item.dataset.category === category) {
                 item.style.display = 'block';
             } else {
                 item.style.display = 'none';

@@ -23,10 +23,10 @@
             
             <div class="action-buttons">
                 <div class="gallery-nav">
-                    <a href="#events-gallery" data-filter="sunday-rides" class="gallery-link">Sunday</a>
-                    <a href="#events-gallery" data-filter="anniversary" class="gallery-link">Anniversary</a>
-                    <a href="#events-gallery" data-filter="national-events" class="gallery-link">Special Events</a>
-                    <a href="#events-gallery" data-filter="endurance" class="gallery-link" onclick="handleEnduranceClick(event)">Endurance</a>
+                    <a href="#events-gallery" data-filter="sunday-rides" class="gallery-link" onclick="handleGalleryNavigation(event, 'sunday-rides')">Sunday</a>
+                    <a href="#events-gallery" data-filter="anniversary" class="gallery-link" onclick="handleGalleryNavigation(event, 'anniversary')">Anniversary</a>
+                    <a href="#events-gallery" data-filter="national-events" class="gallery-link" onclick="handleGalleryNavigation(event, 'national-events')">Special Events</a>
+                    <a href="#events-gallery" data-filter="endurance" class="gallery-link" onclick="handleGalleryNavigation(event, 'endurance')">Endurance</a>
                     <a href="#journey-timeline" class="gallery-link nav-link">Our Journey</a>
                     <!-- <a href="statistics.html" class="gallery-link nav-link">📊 Statistics</a> -->
                 </div>
