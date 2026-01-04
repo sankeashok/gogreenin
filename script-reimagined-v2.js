@@ -134,6 +134,30 @@ function toggleGallery() {
 
 // Timeline year modal functionality with all data embedded
 const yearData = {
+    '2026': {
+        title: '18 Years Legacy',
+        description: 'Continuing the environmental revolution with new endurance challenges.',
+        image: 'data/2025/17th Anniversary-2025 Year.jpg',
+        events: ['18th Anniversary preparation', 'Endurance challenges', 'Community expansion'],
+        monthlyData: [
+            {month: 'Jan', rides: 1, cyclists: 8, events: [
+                {name: 'Ride 1 - New Year Kickoff Ride - Endurance ride to Chikka Tirupathi', url: '', photos: [
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0008.jpg',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00099.jpg',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0010.jpg',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0011.jpg',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0014.jpg',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0016.jpg',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0017.jpg'
+                ], videos: [
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/VID-20260104-WA0026.mp4',
+                    'data/2026/01-January/04-January-2026 - Chikka Tirupathi/VID-20260104-WA0043.mp4'
+                ], description: 'Endurance ride to Chikka Tirupathi'}
+            ]}
+        ],
+        url: '#2026-details'
+    },
     '2025': {
         title: '17 Years Legacy',
         description: 'Continuing the environmental revolution with future vision.',

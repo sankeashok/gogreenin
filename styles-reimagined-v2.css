@@ -228,6 +228,7 @@ body {
 .hero-right {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .videos-section h2 {
@@ -443,6 +444,87 @@ body {
     box-shadow: var(--shadow-hover);
 }
 
+/* Latest Ride Section */
+.latest-ride-section {
+    position: absolute;
+    right: -400px;
+    top: 156px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.latest-ride-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.latest-ride-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--light);
+}
+
+.latest-ride-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.ride-images-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+.ride-images-scroll img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.ride-images-scroll img:hover {
+    transform: scale(1.05);
+}
+
+.view-details-btn {
+    background: var(--primary);
+    color: var(--dark);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+@media (max-width: 768px) {
+    .latest-ride-section {
+        display: none;
+    }
+}
+
 /* Journey Timeline */
 .journey-timeline {
     padding: 80px 20px;
@@ -465,9 +547,9 @@ body {
 .timeline {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 15px;
-    max-height: 600px;
+    max-height: 800px;
 }
 
 @media (max-width: 1024px) {

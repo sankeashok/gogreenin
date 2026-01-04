@@ -1,0 +1,32 @@
+{
+  "year": 2026,
+  "title": "18 Years Legacy",
+  "months": {
+    "01": {
+      "name": "January",
+      "rides": 1,
+      "cyclists": 8,
+      "events": [
+        {
+          "name": "Ride 1 - New Year Kickoff Ride - Endurance ride to Chikka Tirupathi",
+          "url": "",
+          "photos": [
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0008.jpg",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00099.jpg",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0010.jpg",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0011.jpg",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0014.jpg",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0016.jpg",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0017.jpg"
+          ],
+          "videos": [
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/VID-20260104-WA0026.mp4",
+            "data/2026/01-January/04-January-2026 - Chikka Tirupathi/VID-20260104-WA0043.mp4"
+          ],
+          "description": "Endurance ride to Chikka Tirupathi"
+        }
+      ]
+    }
+  }
+}
