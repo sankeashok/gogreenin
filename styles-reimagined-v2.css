@@ -210,6 +210,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 100px 20px 50px;
+    overflow: visible;
 }
 
 .hero-content {
@@ -448,7 +449,7 @@ body {
 .latest-ride-section {
     position: absolute;
     right: -400px;
-    top: 156px;
+    top: 50px;
     background: rgba(0, 255, 136, 0.1);
     border: 2px solid var(--primary);
     border-radius: 20px;
@@ -456,6 +457,7 @@ body {
     width: 280px;
     box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
     backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
 .latest-ride-section h2 {
@@ -482,15 +484,33 @@ body {
 
 .ride-images-scroll {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    overflow-x: auto;
+    overflow: hidden;
     padding: 10px 0;
     margin-bottom: 15px;
+    height: 200px;
+}
+
+.ride-images-scroll .images-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: scroll-vertical 20s linear infinite;
+}
+
+@keyframes scroll-vertical {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+.ride-images-scroll:hover .images-container {
+    animation-play-state: paused;
 }
 
 .ride-images-scroll img {
-    width: 120px;
-    height: 90px;
+    width: 150px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
