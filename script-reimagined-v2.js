@@ -192,7 +192,7 @@ const yearData = {
                     'data/2025/12-December/24-Dec-2025 WednesDay/VID-20251224-WA0038.mp4',
                     'data/2025/12-December/24-Dec-2025 WednesDay/VID-20251224-WA0039.mp4'
                 ]},
-                {name: 'Ride 3 - 17th Anniversary Celebration', url: 'https://drive.google.com/drive/folders/1G30nMM-8f7A0kyYcdw6-KDJsxLUGGiHv'},
+                {name: 'Ride 3 - 17th Anniversary Celebration', url: 'https://youtu.be/MEbBPBkV_rM?si=-B1o0b1R-rcqTz5v', additionalUrl: 'https://drive.google.com/drive/folders/1G30nMM-8f7A0kyYcdw6-KDJsxLUGGiHv'},
                 {name: 'Ride 2 - 14-Dec-2025 Sunday\'s ride', url: 'https://youtube.com/shorts/gFjqLyykyn8'},
                 {name: 'Ride 1 - Christmas Ride', url: ''}
             ]},
@@ -526,6 +526,11 @@ function openYearModal(year) {
                                 eventHtml += `<div class="event-detail"><a href="${eventUrl}" target="_blank" style="color: #00ff88; text-decoration: underline;">${eventName}</a></div>`;
                             } else {
                                 eventHtml += `<div class="event-detail">${eventName}</div>`;
+                            }
+                            
+                            // Add additional URL if available
+                            if (event.additionalUrl && event.additionalUrl.trim() !== '') {
+                                eventHtml += `<div class="event-detail"><a href="${event.additionalUrl}" target="_blank" style="color: #ff6b35; text-decoration: underline; font-size: 0.8rem;">📁 Photos Gallery</a></div>`;
                             }
                             
                             // Add photos if available
