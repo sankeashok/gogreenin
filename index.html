@@ -6,6 +6,7 @@
     <title>GoGreenIn - Cycling Revolution</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Google+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-reimagined-v2.css">
+    <link rel="stylesheet" href="social-media-styles.css">
 </head>
 <body>
     <!-- Top Bar -->
@@ -102,27 +103,50 @@
         </div>
     </section>
 
-    <!-- Latest Ride Section - Moved to separate section -->
-    <section class="latest-ride-standalone">
-        <div class="latest-ride-container">
-            <div class="latest-ride-section">
-                <h2>Latest Ride</h2>
-                <div class="latest-ride-card">
-                    <h3>New Year Kickoff - Chikka Tirupathi</h3>
-                    <p>January 4, 2026 • 8 Cyclists</p>
-                    <div class="ride-images-scroll">
-                        <div class="images-container">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0008.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0010.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0011.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0014.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0008.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
-                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0010.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
+    <!-- Latest Updates Section -->
+    <section class="latest-updates">
+        <div class="updates-container">
+            <h2>Latest Updates</h2>
+            <div class="updates-grid">
+                <div class="latest-ride-section">
+                    <h3>🚴 Latest Ride</h3>
+                    <div class="latest-ride-card">
+                        <h4>New Year Kickoff - Chikka Tirupathi</h4>
+                        <p>January 4, 2026 • 8 Cyclists</p>
+                        <div class="ride-images-scroll">
+                            <div class="images-container">
+                                <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
+                                <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0008.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
+                                <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0010.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
+                                <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0011.jpg" alt="Chikka Tirupathi Ride" onclick="openImageFullscreen(this.src)">
+                            </div>
                         </div>
+                        <a href="#" onclick="openYearModal('2026')" class="view-details-btn">View Full Details</a>
                     </div>
-                    <a href="#" onclick="openYearModal('2026')" class="view-details-btn">View Full Details</a>
+                </div>
+                <div class="facebook-feed">
+                    <h3>📘 Facebook Updates</h3>
+                    <div class="fb-page" 
+                         data-href="https://www.facebook.com/GoGreenIn.org/" 
+                         data-tabs="timeline" 
+                         data-width="350" 
+                         data-height="400" 
+                         data-small-header="true" 
+                         data-adapt-container-width="true" 
+                         data-hide-cover="true" 
+                         data-show-facepile="false">
+                    </div>
+                </div>
+                <div class="instagram-feed">
+                    <h3>📷 Instagram</h3>
+                    <div class="instagram-preview">
+                        <div class="instagram-mini-grid">
+                            <img src="data/2025/2-Feb-2025 00.jpg" alt="Recent ride" onclick="window.open('https://www.instagram.com/gogreenin.org/', '_blank')">
+                            <img src="data/2025/17th Anniversary-2025 Year.jpg" alt="Anniversary" onclick="window.open('https://www.instagram.com/gogreenin.org/', '_blank')">
+                            <img src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg" alt="Latest ride" onclick="window.open('https://www.instagram.com/gogreenin.org/', '_blank')">
+                        </div>
+                        <a href="https://www.instagram.com/gogreenin.org/" target="_blank" class="instagram-follow-btn">Follow @gogreenin.org</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -618,7 +642,7 @@
             </div>
             </div>
         </div>
-    </section>
+
 
     <!-- Activities Grid -->
     <section class="activities">
@@ -691,6 +715,247 @@
                 <h2>Stay Connected with Our Movement</h2>
                 <p>Get updates on rides, environmental initiatives, and community events</p>
                 <button class="newsletter-btn" onclick="openNewsletterModal()">Subscribe to Updates</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="instagram-section">
+        <div class="social-container">
+            <div class="social-header">
+                <h3 class="social-subtitle">Instagram</h3>
+                <h1 class="social-title">INSTAGRAM FEED</h1>
+            </div>
+            
+            <div class="instagram-feed" id="instagram-feed">
+                <!-- Instagram Embed Widget -->
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-instagram-feed" data-app-id="YOUR_ELFSIGHT_APP_ID"></div>
+                
+                <!-- Fallback: Manual Instagram Display -->
+                <div class="instagram-manual" style="display: none;">
+                    <div class="instagram-header">
+                        <a class="instagram-header-link" target="_blank" rel="nofollow noopener" href="https://www.instagram.com/gogreenin.org/" title="@gogreenin.org">
+                            <div class="instagram-header-text">
+                                <div class="instagram-header-img">
+                                    <div class="instagram-header-icon">
+                                        <svg class="instagram-logo" aria-hidden="true" viewBox="0 0 448 512">
+                                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="instagram-header-username">
+                                    <h3>gogreenin.org</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <p style="text-align: center; margin: 20px 0;">
+                        <a href="https://www.instagram.com/gogreenin.org/" target="_blank" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: 600;">View on Instagram</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facebook Feed Section -->
+    <section class="facebook-section">
+        <div class="social-container">
+            <div class="social-header">
+                <h3 class="social-subtitle">Facebook</h3>
+                <h1 class="social-title">FACEBOOK FEED</h1>
+            </div>
+            
+            <div class="facebook-feed" id="facebook-feed">
+                <!-- Facebook Page Plugin -->
+                <div class="fb-page" 
+                     data-href="https://www.facebook.com/GoGreenIn.org/" 
+                     data-tabs="timeline" 
+                     data-width="" 
+                     data-height="600" 
+                     data-small-header="false" 
+                     data-adapt-container-width="true" 
+                     data-hide-cover="false" 
+                     data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/GoGreenIn.org/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/GoGreenIn.org/">GoGreenIn</a>
+                    </blockquote>
+                </div>
+                
+                <!-- Custom Facebook Posts -->
+                <div class="facebook-posts-wrap">
+                    <div class="facebook-item facebook-photo-post">
+                        <div class="facebook-author">
+                            <div class="facebook-author-text">
+                                <div class="facebook-page-name">
+                                    <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
+                                        GoGreenIn
+                                    </a>
+                                </div>
+                                <div class="facebook-date">2 days ago</div>
+                            </div>
+                            <div class="facebook-author-img">
+                                <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
+                                    <img decoding="async" src="GGI_logo.png" class="facebook-feed-image" alt="GoGreenIn" width="40" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="facebook-post-text">
+                            <span class="facebook-text">Join us for our weekly Sunday ride! 🚴♂️ Let's pedal towards a greener Bangalore. Every kilometer counts in our mission to reduce carbon footprint and promote sustainable transportation.</span>
+                        </p>
+                        
+                        <div class="facebook-media-wrap">
+                            <div class="facebook-photo">
+                                <a class="facebook-photo-link" href="https://www.facebook.com/GoGreenIn.org/posts/sample1" target="_blank" rel="nofollow noopener">
+                                    <img decoding="async" src="data/2025/2-Feb-2025 00.jpg" alt="Sunday cycling ride" class="facebook-feed-image">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="facebook-meta-wrap">
+                            <div class="facebook-post-links">
+                                <a class="facebook-viewpost" href="https://www.facebook.com/GoGreenIn.org/posts/sample1" title="View on Facebook" target="_blank" rel="nofollow noopener">View on Facebook</a>
+                                <span class="facebook-dot">·</span>
+                                <a class="facebook-share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/GoGreenIn.org/posts/sample1" title="Share">Share</a>
+                            </div>
+                            
+                            <div class="facebook-view-comments-wrap">
+                                <ul class="facebook-meta facebook-light">
+                                    <li class="facebook-likes">
+                                        <span class="facebook-icon facebook-like">👍</span>
+                                        <span class="facebook-count">45</span>
+                                    </li>
+                                    <li class="facebook-shares">
+                                        <span class="facebook-icon facebook-share">📤</span>
+                                        <span class="facebook-count">12</span>
+                                    </li>
+                                    <li class="facebook-comments">
+                                        <span class="facebook-icon facebook-comment">💬</span>
+                                        <span class="facebook-count">8</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="facebook-item facebook-photo-post">
+                        <div class="facebook-author">
+                            <div class="facebook-author-text">
+                                <div class="facebook-page-name">
+                                    <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
+                                        GoGreenIn
+                                    </a>
+                                </div>
+                                <div class="facebook-date">5 days ago</div>
+                            </div>
+                            <div class="facebook-author-img">
+                                <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
+                                    <img decoding="async" src="GGI_logo.png" class="facebook-feed-image" alt="GoGreenIn" width="40" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="facebook-post-text">
+                            <span class="facebook-text">17 years of environmental impact! 🌱 From 2008 to 2025, we've planted over 2500 trees, cleaned 15 lakes, and built a community of 5000+ eco-warriors. Thank you for being part of this green revolution!</span>
+                        </p>
+                        
+                        <div class="facebook-media-wrap">
+                            <div class="facebook-photo">
+                                <a class="facebook-photo-link" href="https://www.facebook.com/GoGreenIn.org/posts/sample2" target="_blank" rel="nofollow noopener">
+                                    <img decoding="async" src="data/2025/17th Anniversary-2025 Year.jpg" alt="17th Anniversary celebration" class="facebook-feed-image">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="facebook-meta-wrap">
+                            <div class="facebook-post-links">
+                                <a class="facebook-viewpost" href="https://www.facebook.com/GoGreenIn.org/posts/sample2" title="View on Facebook" target="_blank" rel="nofollow noopener">View on Facebook</a>
+                                <span class="facebook-dot">·</span>
+                                <a class="facebook-share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/GoGreenIn.org/posts/sample2" title="Share">Share</a>
+                            </div>
+                            
+                            <div class="facebook-view-comments-wrap">
+                                <ul class="facebook-meta facebook-light">
+                                    <li class="facebook-likes">
+                                        <span class="facebook-icon facebook-like">👍</span>
+                                        <span class="facebook-count">128</span>
+                                    </li>
+                                    <li class="facebook-shares">
+                                        <span class="facebook-icon facebook-share">📤</span>
+                                        <span class="facebook-count">34</span>
+                                    </li>
+                                    <li class="facebook-comments">
+                                        <span class="facebook-icon facebook-comment">💬</span>
+                                        <span class="facebook-count">25</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="facebook-item facebook-photo-post">
+                        <div class="facebook-author">
+                            <div class="facebook-author-text">
+                                <div class="facebook-page-name">
+                                    <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
+                                        GoGreenIn
+                                    </a>
+                                </div>
+                                <div class="facebook-date">1 week ago</div>
+                            </div>
+                            <div class="facebook-author-img">
+                                <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
+                                    <img decoding="async" src="GGI_logo.png" class="facebook-feed-image" alt="GoGreenIn" width="40" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="facebook-post-text">
+                            <span class="facebook-text">New Year, New Adventures! 🎉 Started 2026 with an amazing ride to Chikka Tirupathi. 8 dedicated cyclists braved the early morning to kick off another year of environmental consciousness.</span>
+                        </p>
+                        
+                        <div class="facebook-media-wrap">
+                            <div class="facebook-photo facebook-multiple">
+                                <a class="facebook-photo-link" href="https://www.facebook.com/GoGreenIn.org/posts/sample3" target="_blank" rel="nofollow noopener">
+                                    <div class="facebook-main-image">
+                                        <img decoding="async" src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg" alt="Chikka Tirupathi ride" class="facebook-feed-image">
+                                    </div>
+                                    <div class="facebook-image-attachments">
+                                        <img decoding="async" src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0008.jpg" alt="Group photo" class="facebook-feed-image">
+                                        <img decoding="async" src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0010.jpg" alt="Cycling team" class="facebook-feed-image">
+                                        <div class="facebook-more-images">+5</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="facebook-meta-wrap">
+                            <div class="facebook-post-links">
+                                <a class="facebook-viewpost" href="https://www.facebook.com/GoGreenIn.org/posts/sample3" title="View on Facebook" target="_blank" rel="nofollow noopener">View on Facebook</a>
+                                <span class="facebook-dot">·</span>
+                                <a class="facebook-share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/GoGreenIn.org/posts/sample3" title="Share">Share</a>
+                            </div>
+                            
+                            <div class="facebook-view-comments-wrap">
+                                <ul class="facebook-meta facebook-light">
+                                    <li class="facebook-likes">
+                                        <span class="facebook-icon facebook-like">👍</span>
+                                        <span class="facebook-count">67</span>
+                                    </li>
+                                    <li class="facebook-shares">
+                                        <span class="facebook-icon facebook-share">📤</span>
+                                        <span class="facebook-count">18</span>
+                                    </li>
+                                    <li class="facebook-comments">
+                                        <span class="facebook-icon facebook-comment">💬</span>
+                                        <span class="facebook-count">15</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -843,6 +1108,8 @@
         </div>
     </div>
 
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
     <script src="script-reimagined-v2.js"></script>
 </body>
 </html>
