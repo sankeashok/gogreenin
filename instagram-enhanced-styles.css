@@ -1,0 +1,304 @@
+/* Enhanced Instagram Integration Styles */
+
+/* Detailed Instagram Posts */
+.instagram-detailed-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.instagram-detailed-item {
+    background: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.instagram-detailed-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.instagram-post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.instagram-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.instagram-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 2px;
+}
+
+.instagram-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+}
+
+.instagram-user-details h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.instagram-time {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.instagram-external-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.instagram-external-link:hover {
+    background: var(--background);
+    color: var(--primary);
+}
+
+.instagram-post-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.instagram-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.instagram-post-image img:hover {
+    transform: scale(1.05);
+}
+
+.instagram-post-content {
+    padding: 20px;
+}
+
+.instagram-caption {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0 0 15px 0;
+    word-wrap: break-word;
+}
+
+.instagram-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.instagram-view-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.instagram-view-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(240, 148, 51, 0.4);
+}
+
+.instagram-view-btn::after {
+    content: '↗';
+    font-size: 14px;
+}
+
+/* Enhanced grid layout for different screen sizes */
+@media (max-width: 1200px) {
+    .instagram-detailed-posts {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .instagram-detailed-posts {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .instagram-detailed-item {
+        margin: 0 10px;
+    }
+    
+    .instagram-post-content {
+        padding: 15px;
+    }
+}
+
+/* Instagram Story-style highlights */
+.instagram-highlights {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.instagram-highlights::-webkit-scrollbar {
+    display: none;
+}
+
+.instagram-highlight-item {
+    flex-shrink: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.instagram-highlight-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 3px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.instagram-highlight-circle:hover {
+    transform: scale(1.1);
+}
+
+.instagram-highlight-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+}
+
+.instagram-highlight-label {
+    font-size: 12px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* Instagram-style loading animation */
+.instagram-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.instagram-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top: 3px solid var(--primary);
+    border-radius: 50%;
+    animation: instagram-spin 1s linear infinite;
+}
+
+@keyframes instagram-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Instagram section header */
+.instagram-section-enhanced {
+    background: var(--background);
+    padding: 60px 0;
+}
+
+.instagram-section-enhanced .social-header {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.instagram-section-enhanced .social-header::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 2px;
+}
+
+/* Instagram profile stats */
+.instagram-profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--surface);
+    border-radius: 12px;
+}
+
+.instagram-stat {
+    text-align: center;
+}
+
+.instagram-stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+}
+
+.instagram-stat-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .instagram-profile-stats {
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .instagram-stat-number {
+        font-size: 20px;
+    }
+    
+    .instagram-highlight-circle {
+        width: 60px;
+        height: 60px;
+    }
+}

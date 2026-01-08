@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Google+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-reimagined-v2.css">
     <link rel="stylesheet" href="social-media-styles.css">
+    <link rel="stylesheet" href="instagram-enhanced-styles.css">
 </head>
 <body>
     <!-- Top Bar -->
@@ -681,66 +682,34 @@
             </div>
             
             <div class="instagram-feed" id="instagram-feed">
-                <!-- LIVE INSTAGRAM OPTION 1: Elfsight Widget (Replace YOUR_APP_ID) -->
-                <!-- Uncomment below and add your Elfsight app ID -->
-                <!--
-                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                <div class="elfsight-app-instagram-feed" data-app-id="YOUR_ELFSIGHT_APP_ID"></div>
-                -->
-                
-                <!-- LIVE INSTAGRAM OPTION 2: SnapWidget (Replace with your widget ID) -->
-                <!-- Uncomment below and replace 1234567 with your SnapWidget ID -->
-                <!--
-                <iframe src="https://snapwidget.com/embed/1234567" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:400px;"></iframe>
-                -->
-                
-                <!-- LIVE INSTAGRAM OPTION 3: LightWidget -->
-                <!-- Uncomment below and replace with your LightWidget code -->
-                <!--
-                <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-                <iframe src="//lightwidget.com/widgets/YOUR_WIDGET_ID.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-                -->
-                
-                <!-- CURRENT: Manual Display with your photos -->
-                <div class="instagram-manual">
-                    <div class="instagram-header">
-                        <a class="instagram-header-link" target="_blank" rel="nofollow noopener" href="https://www.instagram.com/gogreenrao/" title="@gogreenrao">
-                            <div class="instagram-header-text">
-                                <div class="instagram-header-img">
-                                    <div class="instagram-header-icon">
-                                        <svg class="instagram-logo" aria-hidden="true" viewBox="0 0 448 512">
-                                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="instagram-header-username">
-                                    <h3>gogreenrao</h3>
-                                    <p style="font-size: 12px; color: #666; margin: 5px 0 0 0;">⚠️ To show live Instagram posts, set up a widget above</p>
+                <!-- Instagram Header with Follow Button -->
+                <div class="instagram-header">
+                    <a class="instagram-header-link" target="_blank" rel="nofollow noopener" href="https://www.instagram.com/gogreenrao/" title="@gogreenrao">
+                        <div class="instagram-header-text">
+                            <div class="instagram-header-img">
+                                <div class="instagram-header-icon">
+                                    <svg class="instagram-logo" aria-hidden="true" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                                    </svg>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                    
-                    <!-- Instagram Posts Grid -->
-                    <div class="instagram-images" id="instagram-images">
-                        <!-- Posts will be loaded here -->
-                    </div>
-                    
-                    <div class="instagram-load-more">
-                        <button class="instagram-load-btn" type="button" onclick="loadInstagramPosts()">
-                            <span class="instagram-btn-text">Load Sample Posts</span>
-                        </button>
-                        
-                        <span class="instagram-follow-btn">
-                            <a target="_blank" rel="nofollow noopener" href="https://www.instagram.com/gogreenrao/">
-                                <svg class="instagram-follow-icon" aria-hidden="true" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-                                </svg>
-                                <span>Follow @gogreenrao</span>
-                            </a>
-                        </span>
-                    </div>
+                            <div class="instagram-header-username">
+                                <h3>@gogreenrao</h3>
+                                <p style="font-size: 12px; color: #666; margin: 5px 0 0 0;">🚴♂️ Follow our cycling adventures & environmental initiatives</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/gogreenrao/" target="_blank" class="instagram-follow-btn-header">
+                        <svg class="instagram-follow-icon" aria-hidden="true" viewBox="0 0 448 512" width="16" height="16">
+                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                        Follow
+                    </a>
                 </div>
+                
+                <!-- Live Elfsight Instagram Feed -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-6cd01183-27f9-48a4-8a6d-c6c12e9b5231" data-elfsight-app-lazy></div>
             </div>
         </div>
     </section>
@@ -754,6 +723,31 @@
             </div>
             
             <div class="facebook-feed" id="facebook-feed">
+                <!-- Facebook Header with Follow Button -->
+                <div class="facebook-header">
+                    <a class="facebook-header-link" target="_blank" rel="nofollow noopener" href="https://www.facebook.com/GoGreenIn.org/" title="GoGreenIn">
+                        <div class="facebook-header-text">
+                            <div class="facebook-header-img">
+                                <div class="facebook-header-icon">
+                                    <svg class="facebook-logo" aria-hidden="true" viewBox="0 0 24 24" width="32" height="32">
+                                        <path fill="#1877f2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="facebook-header-username">
+                                <h3>GoGreenIn</h3>
+                                <p style="font-size: 12px; color: #666; margin: 5px 0 0 0;">🚴♂️ Follow our cycling community & environmental initiatives</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/GoGreenIn.org/" target="_blank" class="facebook-follow-btn-header">
+                        <svg class="facebook-follow-icon" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
+                            <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        Follow
+                    </a>
+                </div>
+                
                 <!-- Facebook Page Plugin -->
                 <div class="fb-page" 
                      data-href="https://www.facebook.com/GoGreenIn.org/" 
@@ -767,181 +761,6 @@
                     <blockquote cite="https://www.facebook.com/GoGreenIn.org/" class="fb-xfbml-parse-ignore">
                         <a href="https://www.facebook.com/GoGreenIn.org/">GoGreenIn</a>
                     </blockquote>
-                </div>
-                
-                <!-- Custom Facebook Posts -->
-                <div class="facebook-posts-wrap">
-                    <div class="facebook-item facebook-photo-post">
-                        <div class="facebook-author">
-                            <div class="facebook-author-text">
-                                <div class="facebook-page-name">
-                                    <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
-                                        GoGreenIn
-                                    </a>
-                                </div>
-                                <div class="facebook-date">2 days ago</div>
-                            </div>
-                            <div class="facebook-author-img">
-                                <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
-                                    <img decoding="async" src="GGI_logo.png" class="facebook-feed-image" alt="GoGreenIn" width="40" height="40">
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <p class="facebook-post-text">
-                            <span class="facebook-text">Join us for our weekly Sunday ride! 🚴♂️ Let's pedal towards a greener Bangalore. Every kilometer counts in our mission to reduce carbon footprint and promote sustainable transportation.</span>
-                        </p>
-                        
-                        <div class="facebook-media-wrap">
-                            <div class="facebook-photo">
-                                <a class="facebook-photo-link" href="https://www.facebook.com/GoGreenIn.org/posts/sample1" target="_blank" rel="nofollow noopener">
-                                    <img decoding="async" src="data/2025/2-Feb-2025 00.jpg" alt="Sunday cycling ride" class="facebook-feed-image">
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="facebook-meta-wrap">
-                            <div class="facebook-post-links">
-                                <a class="facebook-viewpost" href="https://www.facebook.com/GoGreenIn.org/posts/sample1" title="View on Facebook" target="_blank" rel="nofollow noopener">View on Facebook</a>
-                                <span class="facebook-dot">·</span>
-                                <a class="facebook-share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/GoGreenIn.org/posts/sample1" title="Share">Share</a>
-                            </div>
-                            
-                            <div class="facebook-view-comments-wrap">
-                                <ul class="facebook-meta facebook-light">
-                                    <li class="facebook-likes">
-                                        <span class="facebook-icon facebook-like">👍</span>
-                                        <span class="facebook-count">45</span>
-                                    </li>
-                                    <li class="facebook-shares">
-                                        <span class="facebook-icon facebook-share">📤</span>
-                                        <span class="facebook-count">12</span>
-                                    </li>
-                                    <li class="facebook-comments">
-                                        <span class="facebook-icon facebook-comment">💬</span>
-                                        <span class="facebook-count">8</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="facebook-item facebook-photo-post">
-                        <div class="facebook-author">
-                            <div class="facebook-author-text">
-                                <div class="facebook-page-name">
-                                    <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
-                                        GoGreenIn
-                                    </a>
-                                </div>
-                                <div class="facebook-date">5 days ago</div>
-                            </div>
-                            <div class="facebook-author-img">
-                                <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
-                                    <img decoding="async" src="GGI_logo.png" class="facebook-feed-image" alt="GoGreenIn" width="40" height="40">
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <p class="facebook-post-text">
-                            <span class="facebook-text">17 years of environmental impact! 🌱 From 2008 to 2025, we've planted over 2500 trees, cleaned 15 lakes, and built a community of 5000+ eco-warriors. Thank you for being part of this green revolution!</span>
-                        </p>
-                        
-                        <div class="facebook-media-wrap">
-                            <div class="facebook-photo">
-                                <a class="facebook-photo-link" href="https://www.facebook.com/GoGreenIn.org/posts/sample2" target="_blank" rel="nofollow noopener">
-                                    <img decoding="async" src="data/2025/17th Anniversary-2025 Year.jpg" alt="17th Anniversary celebration" class="facebook-feed-image">
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="facebook-meta-wrap">
-                            <div class="facebook-post-links">
-                                <a class="facebook-viewpost" href="https://www.facebook.com/GoGreenIn.org/posts/sample2" title="View on Facebook" target="_blank" rel="nofollow noopener">View on Facebook</a>
-                                <span class="facebook-dot">·</span>
-                                <a class="facebook-share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/GoGreenIn.org/posts/sample2" title="Share">Share</a>
-                            </div>
-                            
-                            <div class="facebook-view-comments-wrap">
-                                <ul class="facebook-meta facebook-light">
-                                    <li class="facebook-likes">
-                                        <span class="facebook-icon facebook-like">👍</span>
-                                        <span class="facebook-count">128</span>
-                                    </li>
-                                    <li class="facebook-shares">
-                                        <span class="facebook-icon facebook-share">📤</span>
-                                        <span class="facebook-count">34</span>
-                                    </li>
-                                    <li class="facebook-comments">
-                                        <span class="facebook-icon facebook-comment">💬</span>
-                                        <span class="facebook-count">25</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="facebook-item facebook-photo-post">
-                        <div class="facebook-author">
-                            <div class="facebook-author-text">
-                                <div class="facebook-page-name">
-                                    <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
-                                        GoGreenIn
-                                    </a>
-                                </div>
-                                <div class="facebook-date">1 week ago</div>
-                            </div>
-                            <div class="facebook-author-img">
-                                <a href="https://facebook.com/GoGreenIn.org/" target="_blank" rel="nofollow noopener">
-                                    <img decoding="async" src="GGI_logo.png" class="facebook-feed-image" alt="GoGreenIn" width="40" height="40">
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <p class="facebook-post-text">
-                            <span class="facebook-text">New Year, New Adventures! 🎉 Started 2026 with an amazing ride to Chikka Tirupathi. 8 dedicated cyclists braved the early morning to kick off another year of environmental consciousness.</span>
-                        </p>
-                        
-                        <div class="facebook-media-wrap">
-                            <div class="facebook-photo facebook-multiple">
-                                <a class="facebook-photo-link" href="https://www.facebook.com/GoGreenIn.org/posts/sample3" target="_blank" rel="nofollow noopener">
-                                    <div class="facebook-main-image">
-                                        <img decoding="async" src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA00.jpg" alt="Chikka Tirupathi ride" class="facebook-feed-image">
-                                    </div>
-                                    <div class="facebook-image-attachments">
-                                        <img decoding="async" src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0008.jpg" alt="Group photo" class="facebook-feed-image">
-                                        <img decoding="async" src="data/2026/01-January/04-January-2026 - Chikka Tirupathi/IMG-20260104-WA0010.jpg" alt="Cycling team" class="facebook-feed-image">
-                                        <div class="facebook-more-images">+5</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="facebook-meta-wrap">
-                            <div class="facebook-post-links">
-                                <a class="facebook-viewpost" href="https://www.facebook.com/GoGreenIn.org/posts/sample3" title="View on Facebook" target="_blank" rel="nofollow noopener">View on Facebook</a>
-                                <span class="facebook-dot">·</span>
-                                <a class="facebook-share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/GoGreenIn.org/posts/sample3" title="Share">Share</a>
-                            </div>
-                            
-                            <div class="facebook-view-comments-wrap">
-                                <ul class="facebook-meta facebook-light">
-                                    <li class="facebook-likes">
-                                        <span class="facebook-icon facebook-like">👍</span>
-                                        <span class="facebook-count">67</span>
-                                    </li>
-                                    <li class="facebook-shares">
-                                        <span class="facebook-icon facebook-share">📤</span>
-                                        <span class="facebook-count">18</span>
-                                    </li>
-                                    <li class="facebook-comments">
-                                        <span class="facebook-icon facebook-comment">💬</span>
-                                        <span class="facebook-count">15</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1195,7 +1014,17 @@
     </div>
 
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0&appId=YOUR_APP_ID"></script>
+    
+    <!-- Initialize Facebook SDK -->
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v18.0'
+        });
+    };
+    </script>
     
     <!-- Instagram Feed JavaScript -->
     <script>
@@ -1278,6 +1107,8 @@
     });
     </script>
     
+    <script src="token-encryption.js"></script>
+    <script src="secure-instagram-api.js"></script>
     <script src="script-reimagined-v2.js"></script>
 </body>
 </html>
