@@ -1,3 +1,24 @@
+/* Under Construction Flash Message */
+.construction-flash {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #ff6b35;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+    animation: flash 2s infinite;
+}
+
+@keyframes flash {
+    0%, 50% { opacity: 1; }
+    25%, 75% { opacity: 0.7; }
+}
+
 /* Reimagined GoGreenIn - Clean & Structured */
 :root {
     --primary: #00ff88;
